@@ -13,6 +13,8 @@ objenv(config, {prefix: 'APS', camelCase: true}, (key, value) => {
 
 const api = new ParseServer(config)
 
+app.enable('trust proxy')
+
 // Serve the Parse API on the /parse URL prefix
 app.use('/', api)
 
